@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/hyperimage.esm.js"></script>
+    <script nomodule src="/build/hyperimage.js"></script>
+  </head>
+  <body>
+    <sv-picture
+      srcset="
+        900::https://placehold.it/1000x400,
+        700::https://placehold.it/700x400,
+        400::https://placehold.it/400x400,
+      "
+      src="https://placehold.it/300x700"
+      alt="hello, world"
+    >
+    </sv-picture>
+  </body>
+</html>
