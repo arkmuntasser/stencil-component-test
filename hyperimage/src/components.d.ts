@@ -9,6 +9,10 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface SvLink {
+    'href': string;
+    'target': string;
+  }
   interface SvPicture {
     'alt': string;
     'src': string;
@@ -19,17 +23,28 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLSvLinkElement extends Components.SvLink, HTMLStencilElement {}
+  var HTMLSvLinkElement: {
+    prototype: HTMLSvLinkElement;
+    new (): HTMLSvLinkElement;
+  };
+
   interface HTMLSvPictureElement extends Components.SvPicture, HTMLStencilElement {}
   var HTMLSvPictureElement: {
     prototype: HTMLSvPictureElement;
     new (): HTMLSvPictureElement;
   };
   interface HTMLElementTagNameMap {
+    'sv-link': HTMLSvLinkElement;
     'sv-picture': HTMLSvPictureElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface SvLink extends JSXBase.HTMLAttributes<HTMLSvLinkElement> {
+    'href'?: string;
+    'target'?: string;
+  }
   interface SvPicture extends JSXBase.HTMLAttributes<HTMLSvPictureElement> {
     'alt'?: string;
     'src'?: string;
@@ -37,6 +52,7 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'sv-link': SvLink;
     'sv-picture': SvPicture;
   }
 }

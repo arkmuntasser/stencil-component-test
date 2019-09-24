@@ -1,4 +1,4 @@
-# sv-picture
+# sv-link
 
 
 
@@ -9,9 +9,9 @@
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
-| `alt`    | `alt`     |             | `string` | `undefined` |
-| `src`    | `src`     |             | `string` | `undefined` |
-| `srcset` | `srcset`  |             | `string` | `undefined` |
+| `href`   | `href`    |             | `string` | `undefined` |
+| `target` | `target`  |             | `string` | `undefined` |
+| `title`  | `title`   |             | `string` | `undefined` |
 
 
 ----------------------------------------------
