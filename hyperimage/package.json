@@ -26,6 +26,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "npm": "^6.11.3"
+    "npm": "^6.14.6"
   }
 }
